@@ -1,0 +1,5 @@
+https://opencv.org/
+https://machinelearningmastery.com/introduction-to-deep-learning-for-face-recognition/
+https://techvidvan.com/tutorials/face-recognition-project-python-opencv/
+https://pyimagesearch.com/2017/08/21/deep-learning-with-opencv/
+https://pypi.org/project/face-recognition/
