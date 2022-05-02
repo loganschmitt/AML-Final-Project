@@ -3,3 +3,6 @@ https://machinelearningmastery.com/introduction-to-deep-learning-for-face-recogn
 https://techvidvan.com/tutorials/face-recognition-project-python-opencv/
 https://pyimagesearch.com/2017/08/21/deep-learning-with-opencv/
 https://pypi.org/project/face-recognition/
+
+Face Recognition Package (Easy to use face recognition)
+https://face-recognition.readthedocs.io/en/latest/readme.html
