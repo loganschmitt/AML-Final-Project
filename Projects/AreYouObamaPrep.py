@@ -57,6 +57,11 @@ f.write(pickle.dumps(data))
 f.close()
 
 
+# 
+# 
+# 
+
+
 #Get the names of the image files (any file that ends with g because it may be .png or .jpg or .jpeg)
 # train_images = [x for x in training_folder if x.endswith('g')]
 # if DEBUG > 0: print('\n', train_images, '\n')
