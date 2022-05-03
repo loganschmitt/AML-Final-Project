@@ -6,3 +6,14 @@ https://pypi.org/project/face-recognition/
 
 Face Recognition Package (Easy to use face recognition)
 https://face-recognition.readthedocs.io/en/latest/readme.html
+
+https://pyimagesearch.com/2017/04/03/facial-landmarks-dlib-opencv-python/
+http://dlib.net/cnn_face_detector.py.html
+http://dlib.net/face_recognition.py.html
+
+https://learnopencv.com/deep-learning-with-opencvs-dnn-module-a-definitive-guide/#guide-to-image-classification
+https://stackoverflow.com/questions/37215036/dlib-vs-opencv-which-one-to-use-when
+
+https://github.com/ageitgey/face_recognition
+https://pyimagesearch.com/2018/06/18/face-recognition-with-opencv-python-and-deep-learning/
+

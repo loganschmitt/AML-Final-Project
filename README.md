@@ -8,6 +8,9 @@ This project has given us the opportunity to explore something new related to Ma
 
 ## **Python Virtual Environments**
 
+### **MacOS**
+https://pyimagesearch.com/2018/09/19/pip-install-opencv/
+
 ### **Windows**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 While setting up OpenCV and the Face Recognition module, we ran into multiple issues regarding the installation of these packages. Given the nature of exploring new areas of this project, we decided to understand the issues we were having and make sure that whoever tries to reproduce this has a clear guide on making sure it works properly.<br/>
@@ -47,9 +50,20 @@ Below are the steps to install Python and the virtual environment from scratch o
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 As previously mentioned, this project has the goal of allowing us to explore topics on Computer Visions and learn how to do some cool implementations. To achieve this goal, we will work on several small projects that we found online and make some modifications on them as well as explain how each project works under the hood.
 
-### **Are You Obama?**
+### **Obama/Not Obama**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Give a training set of Obama pictures, upload your picture, tells if you are obama or not
+Inspired by the Hotdog/Not Hotdog program from "Silicon Valley", we decided to create a similar project: Obama/Not Obama. Instead of detecting hotdogs, our program detects faces in any given images and tells the user if that person is Obama or not. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The program uses [OpenCV](https://opencv.org) to read the image and then uses the [``face_recognition``](https://github.com/ageitgey/face_recognition) package to detect faces and identify them. This library uses [``dlib``](http://dlib.net)'s facial recognition algorithms, but is much easier to use. The dlib facial recognition network is based on ResNet-34 and it is already trained on a large dataset, called [Labeled Faces in the Wild (LFW)](http://vis-www.cs.umass.edu/lfw/).<br>
+How to run Obama/Not Obama:
+1. Upload any pictures you want the program to go through on the Your-Pictures folder located inside the Images folder
+   1. AML-Final-Project\Images\Your-Pictures
+2. Run the AreYouObama.py script from your virtual environment or your IDE
+3. Respond if you want the program to work on a picture uploaded by you or on live camera
+4. See the results
+   1. If you are on live video, try pulling up a picture of Obama on your phone to the camera!
+   2. To stop the live video, simply press Ctrl+C on the terminal
+
 
 ### **Live Face Recognition**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
