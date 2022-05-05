@@ -78,6 +78,7 @@ while True:
     if answer == '1':
         known_encodings = pickle.loads(open('Helper-Files/Obama-encodings.pickle', "rb").read())
 
+
         # source_folder = os.listdir('Images/Unknown')
         source_folder = os.listdir('Images/Your-Pictures')
 
