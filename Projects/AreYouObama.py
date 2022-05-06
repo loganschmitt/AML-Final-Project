@@ -14,8 +14,8 @@ def find_obama(file, known_encodings):
     new_names = []
 
     # Load the image and convert it to RGB (OpenCV uses BGR, but dlib uses RGB, and face_recognition uses dlib)
-    # image = cv2.imread('Images/Unknown/'+file)
-    image = cv2.imread('Images/Your-Pictures/'+file)
+    image = cv2.imread('Images/Unknown/'+file)
+    # image = cv2.imread('Images/Your-Pictures/'+file)
     rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     
     # Detect the (x, y)-coordinates of the boxes around the faces in the image
@@ -65,10 +65,8 @@ def find_obama(file, known_encodings):
     # Show the picture
     cv2.imshow("Image", image)
     cv2.waitKey(0)  # Wait for any key to be pressed (so we can see the next image)
-
-# Load the known faces and encodings into a dictionary
-    # Keys: 'encodings' and 'names'
-    # known_encodings['names'] to return the names
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        return
     
 
 print("\n\nWould you like to detect President Barack Obama on a picture uploaded by you or on live camera? \n(1 for uploaded, 2 for live, 0 to exit) ")
@@ -79,17 +77,20 @@ while True:
         known_encodings = pickle.loads(open('Helper-Files/Obama-encodings.pickle', "rb").read())
 
 
-        # source_folder = os.listdir('Images/Unknown')
-        source_folder = os.listdir('Images/Your-Pictures')
+        source_folder = os.listdir('Images/Unknown')
+        # source_folder = os.listdir('Images/Your-Pictures')
 
         for file in source_folder:
             find_obama(file, known_encodings)
         
+        print('Goobye!\n\n')
+        break
+        
     elif answer == '2':
         lo.runLiveObama()
+        print('Goobye!\n\n')
+        break
 
     elif answer == '0':
         print('Goobye!\n\n')
         break
-    else:
-        print("Please enter 1 or 2: ")
