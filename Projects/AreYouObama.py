@@ -14,8 +14,8 @@ def find_obama(file, known_encodings):
     new_names = []
 
     # Load the image and convert it to RGB (OpenCV uses BGR, but dlib uses RGB, and face_recognition uses dlib)
-    # image = cv2.imread('Images/Unknown/'+file)
-    image = cv2.imread('Images/Your-Pictures/'+file)
+    image = cv2.imread('Images/Unknown/'+file)
+    # image = cv2.imread('Images/Your-Pictures/'+file)
     rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     
     # Detect the (x, y)-coordinates of the boxes around the faces in the image
@@ -79,8 +79,8 @@ while True:
         known_encodings = pickle.loads(open('Helper-Files/Obama-encodings.pickle', "rb").read())
 
 
-        # source_folder = os.listdir('Images/Unknown')
-        source_folder = os.listdir('Images/Your-Pictures')
+        source_folder = os.listdir('Images/Unknown')
+        # source_folder = os.listdir('Images/Your-Pictures')
 
         for file in source_folder:
             find_obama(file, known_encodings)
