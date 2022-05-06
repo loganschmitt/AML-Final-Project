@@ -13,10 +13,11 @@ def extract_index_nparray(nparray):
 
 # PUT the link to your first photo here
 img = cv2.imread("Images/Your-Pictures/Me.jpeg")
-img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-mask = np.zeros_like(img_gray)
 # PUT the link to your second photo here
 img2 = cv2.imread("Images/Your-Pictures/wyatt_pic.jpg")
+
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+mask = np.zeros_like(img_gray)
 img2_gray = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
 

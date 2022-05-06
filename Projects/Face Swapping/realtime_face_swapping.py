@@ -11,7 +11,7 @@ def extract_index_nparray(nparray):
         break
     return index
 
-
+# ADD YOUR PHOTO PATH HERE
 img = cv2.imread("Images/Your-Pictures/wyatt_pic.jpg")
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 mask = np.zeros_like(img_gray)
