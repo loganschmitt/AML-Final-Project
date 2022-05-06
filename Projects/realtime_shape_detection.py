@@ -38,10 +38,8 @@ while True:
 
     # Contours detection
     if int(cv2.__version__[0]) > 3:
-        # Opencv 4.x.x
         contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     else:
-        # Opencv 3.x.x
         _, contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
     for cnt in contours:
@@ -53,6 +51,7 @@ while True:
         if area > 400:
             cv2.drawContours(frame, [approx], 0, (0, 0, 0), 5)
 
+            # Checks the length of the contour
             if len(approx) == 3:
                 cv2.putText(frame, "Triangle", (x, y), font, 1, (0, 0, 0))
             elif len(approx) == 4:
@@ -60,12 +59,10 @@ while True:
             elif 10 < len(approx) < 20:
                 cv2.putText(frame, "Circle", (x, y), font, 1, (0, 0, 0))
 
-
     cv2.imshow("Frame", frame)
-    cv2.imshow("Mask", mask)
 
     key = cv2.waitKey(1)
-    if key == 27:
+    if key == 27: # THIS IS THE ESC KEY
         break
 
 cap.release()

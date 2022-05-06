@@ -51,8 +51,7 @@ for c in cnts:
     print(f"cY:{cY}")
     shape = sd.detect(c)
 
-    # multiply the contour (x, y)-coordinates by the resize ratio,
-    # then draw the contours and the name of the shape on the image
+    # draw the contours and the name of the shape on the image
     c = c.astype("float")
     c *= ratio
     c = c.astype("int")
@@ -62,4 +61,4 @@ for c in cnts:
 
     # show the output image
     cv2.imshow("Image", image)
-    cv2.waitKey(0)
+    cv2.waitKey(0) # program finishes after all shapes and contours have been shown
