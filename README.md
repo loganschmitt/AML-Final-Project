@@ -6,7 +6,6 @@ This project has given us the opportunity to explore something new related to Ma
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
-
 ## **Python Virtual Environments**
 
 ### **Windows**
@@ -76,6 +75,8 @@ Below are the steps to install Python and the virtual environment from scratch o
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 As previously mentioned, this project has the goal of allowing us to explore topics on Computer Visions and learn how to do some cool implementations. To achieve this goal, we will work on several small projects that we found online and make some modifications on them as well as explain how each project works under the hood.
 
+<hr>
+
 ### **Obama/Not Obama**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Inspired by the Hotdog/Not Hotdog program from "Silicon Valley", we decided to create a similar project: Obama/Not Obama. Instead of detecting hotdogs, our program detects faces in any given images and tells the user if that person is Obama or not. <br/>
@@ -95,6 +96,8 @@ How to run Obama/Not Obama:
 
 <img src='Images/Project-Examples/Obama Uploaded 1.png' width=300><img src='Images/Project-Examples/Obama Live.png' width=300><img src='Images/Project-Examples/Obama Uploaded 2.png' width=300>
 
+<hr>
+
 ### **Face Swap**
 Similar to the Obama project this uses OpenCV to read the image and recognize a face. Then uses dlib's trained facial recognition model that has 68 coordinates that maps a person face. I was inspired to do this project to make the most disturbing face swaps of my teammates as possible.
 <br>
@@ -113,12 +116,22 @@ Notes: This script is pretty buggy and will crash if the camera takes in too muc
 
 <img src='Images/Project-Examples/wyatt_logan_faceswap.jpeg' width=300> <img src='Images/Project-Examples/Face_Swap_Live.png' width=300>
 
-### **Live Face Recognition**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Give training set of your pictures (and Obama's), turn on webcam, tells who you are live
+<hr>
 
-### **Hand Gesture Reader 0-5**
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*
-Give training set from kaggle, open webcam, reads number on your hand
-https://www.kaggle.com/datasets/shirleylizz/hand-gestures-of-digits-from-0-to-5
+### **Shape Detection and Recognition**
+The next two projects are similar in the sense they are the same topic but accomplish different things. 'ShapeDetection.py' located in the 'Projects' folder takes in an image from the 'Images/shapes' folder and attempts to detect any shapes found in the image. It does this by using contour and attempts to create shape from the given contour of the object. 
 
+Upon running the program, you will be asked which image from the ones supplied you would like ot view. However, you can always add more images and copy the pathname to the image from the 'Images/shapes' folder. An example of this program's output can be seen below.
+
+ <img src='Images/Project-Examples/shapes-unknown.png' width=300> <img src='Images/Project-Examples/shapes-detected.png' width=300>
+
+To terminate the program simply keep pressing keys until no more possible shapes are seen.
+ <br>
+<hr>
+The other version of shape detection operates in a similar manner, but with a twist. It uses real time to find contours in things around you to detect shapes using your computer's video camera. While the first file requires a key press to progress, this real time shape detection is constantly picking up shapes within your environemnt. An example of this program can be seen below.
+
+ <img src='Images/Project-Examples/live-rectangle.png' width=300> <img src='Images/Project-Examples/live-triangle.png' width=300>
+
+ <br>
+
+From these pictures we can see just how much the program picks up. We held up a blue piece of paper in the shape of a rectangle and triangle to help emphasize the shape detection. By using contour to identify how many sides the given object appears to have, the program then can correctly label the shape. The 'esc' key will terminate this program until the next run.
